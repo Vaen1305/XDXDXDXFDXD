@@ -1,0 +1,11 @@
+# Comentarios empiezan con #
+name: Test          # Nombre visible
+on:                                 # Cuándo ejecutar
+  push:                            # Al hacer push
+    branches: [main, develop]      # En estas ramas
+jobs:                              # Trabajos a ejecutar
+  mi_job:                          # Nombre del job
+    runs-on: ubuntu-latest         # Máquina virtual
+    steps:                         # Pasos del job
+      - uses: actions/checkout@v4  # Acción predefinida
+      - run: echo "¡Hola mundo!"   # Comando personalizado
